@@ -2,22 +2,71 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pantalla TV</title>
+  <title>Pantalla TV - Carrusel</title>
   <style>
-    body { 
-      margin: 0; 
-      overflow: hidden; 
-      background: black; 
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: black;
     }
-    img { 
-      width: 100vw; 
-      height: 100vh; 
-      object-fit: cover; 
+
+    /* Contenedor del carrusel */
+    .slider {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Contenedor de las imágenes (ancho = 500% porque son 5 imágenes) */
+    .slides {
+      display: flex;
+      width: 500%;
+      height: 100%;
+      animation: carrusel 25s infinite; /* 25s en total -> 5s por imagen */
+    }
+
+    /* Ajuste de cada imagen */
+    .slides img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    /* Animación del movimiento */
+    @keyframes carrusel {
+      0% { margin-left: 0; }
+      16% { margin-left: 0; }
+
+      20% { margin-left: -100vw; }
+      36% { margin-left: -100vw; }
+
+      40% { margin-left: -200vw; }
+      56% { margin-left: -200vw; }
+
+      60% { margin-left: -300vw; }
+      76% { margin-left: -300vw; }
+
+      80% { margin-left: -400vw; }
+      96% { margin-left: -400vw; }
+
+      100% { margin-left: 0; }
     }
   </style>
 </head>
 <body>
-  <img src="imagen.jpg" alt="Pantalla TV">
+
+  <div class="slider">
+    <div class="slides">
+      <img src="imagen1.jpg" alt="Imagen 1">
+      <img src="imagen2.jpg" alt="Imagen 2">
+      <img src="imagen3.jpg" alt="Imagen 3">
+      <img src="imagen4.jpg" alt="Imagen 4">
+      <img src="imagen5.jpg" alt="Imagen 5">
+    </div>
+  </div>
+
 </body>
 </html>
+
 
