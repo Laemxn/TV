@@ -2,71 +2,19 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pantalla TV - Carrusel</title>
+  <title>Pantalla TV</title>
   <style>
-    body {
-      margin: 0;
-      overflow: hidden;
-      background: black;
-    }
-
-    /* Contenedor del carrusel */
-    .slider {
-      width: 100vw;
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-    }
-
-    /* Contenedor de las imágenes (ancho = 500% porque son 5 imágenes) */
-    .slides {
-      display: flex;
-      width: 500%;
-      height: 100%;
-      animation: carrusel 150s infinite; /* 25s en total -> 5s por imagen */
-    }
-
-    /* Ajuste de cada imagen */
-    .slides img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-    }
-
-    /* Animación del movimiento */
-    @keyframes carrusel {
-      0% { margin-left: 0; }
-      16% { margin-left: 0; }
-
-      20% { margin-left: -100vw; }
-      36% { margin-left: -100vw; }
-
-      40% { margin-left: -200vw; }
-      56% { margin-left: -200vw; }
-
-      60% { margin-left: -300vw; }
-      76% { margin-left: -300vw; }
-
-      80% { margin-left: -400vw; }
-      96% { margin-left: -400vw; }
-
-      100% { margin-left: 0; }
-    }
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    iframe { width: 100vw; height: 100vh; border: none; }
   </style>
 </head>
 <body>
-
-  <div class="slider">
-    <div class="slides">
-      <img src="imagen1.jpg" alt="Imagen 1">
-      <img src="imagen2.jpg" alt="Imagen 2">
-      <img src="imagen3.jpg" alt="Imagen 3">
-      <img src="imagen4.jpg" alt="Imagen 4">
-      <img src="imagen5.jpg" alt="Imagen 5">
-    </div>
-  </div>
-
+  <!-- Reemplazar el src con el código de incrustar la carpeta pública de OneDrive -->
+  <iframe src="https://1drv.ms/f/c/9d48f4a8cd6ed264/IgD1-QX2jk4gQqgJwJUv6TYMAQHMnk7cWBYJQi-R1TIznag?e=kSkAcA"></iframe>
 </body>
 </html>
+
+
+  
 
 
