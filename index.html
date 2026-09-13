@@ -2,16 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pantalla TV Local</title>
+  <title>Pantalla TV - Carrusel</title>
   
-  <!-- Recarga la página automáticamente cada 300 segundos (5 minutos) en HTML puro -->
+  <!-- Recarga la página automáticamente cada 5 minutos (300 segundos) -->
   <meta http-equiv="refresh" content="300">
 
   <style>
-    body {
+    /* Reseteo global para quitar márgenes y evitar desajustes */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       overflow: hidden;
       background: black;
+      width: 100vw;
+      height: 100vh;
     }
 
     /* Contenedor principal a pantalla completa */
@@ -22,7 +30,7 @@
       position: relative;
     }
 
-    /* Franja con las 5 imágenes animadas mediante CSS */
+    /* Franja con las 5 imágenes animadas */
     .slides {
       display: flex;
       width: 500%;
@@ -30,14 +38,15 @@
       animation: carrusel 25s infinite;
     }
 
-    /* Tamaño de cada imagen */
+    /* Ajuste de imágenes a la pantalla */
     .slides img {
       width: 100vw;
       height: 100vh;
-      object-fit: cover;
+      object-fit: cover;        /* Cubre toda la pantalla sin deformar */
+      object-position: center;   /* Centra la imagen por si la proporción varia */
     }
 
-    /* Animación de cambio de imagen en CSS puro */
+    /* Animación de cambio entre las 5 imágenes */
     @keyframes carrusel {
       0%   { margin-left: 0; }
       16%  { margin-left: 0; }
@@ -48,7 +57,7 @@
       40%  { margin-left: -200vw; }
       56%  { margin-left: -200vw; }
 
-      60%  { margin-left: -200vw; }
+      60%  { margin-left: -300vw; }
       76%  { margin-left: -300vw; }
 
       80%  { margin-left: -400vw; }
@@ -62,16 +71,18 @@
 
   <div class="slider">
     <div class="slides">
-      <img src="imagen1.jpg" alt="Imagen 1">
-      <img src="imagen2.jpg" alt="Imagen 2">
-      <img src="imagen3.jpg" alt="Imagen 3">
-      <img src="imagen4.jpg" alt="Imagen 4">
-      <img src="imagen5.jpg" alt="Imagen 5">
+      <img src="imagen1.jpg?v=1" alt="Imagen 1">
+      <img src="imagen2.jpg?v=1" alt="Imagen 2">
+      <img src="imagen3.jpg?v=1" alt="Imagen 3">
+      <img src="imagen4.jpg?v=1" alt="Imagen 4">
+      <img src="imagen5.jpg?v=1" alt="Imagen 5">
     </div>
   </div>
 
 </body>
 </html>
+
+  
 
 
 
